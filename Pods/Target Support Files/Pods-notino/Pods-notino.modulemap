@@ -1,0 +1,6 @@
+framework module Pods_notino {
+  umbrella header "Pods-notino-umbrella.h"
+
+  export *
+  module * { export * }
+}
