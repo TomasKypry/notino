@@ -32,7 +32,7 @@ class ProductsViewModel {
             case .failure(let error):
                 print(error)
             case .success(let response):
-                self?.products = [.init(),.init(),.init(),.init(),.init(),.init(),.init(),.init(),.init(),.init()]
+                self?.products = response.products
             }
         }
     }

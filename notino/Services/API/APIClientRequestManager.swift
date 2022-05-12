@@ -71,7 +71,7 @@ class APIClientRequestManager {
                 let decoded = try self.decode(T.self, from: data)
                 completion(.success(decoded))
             } catch let error {
-                let reason = error.localizedDescription
+                let reason = "\(error)"
                 let apiError = APIError(.unableToParseResponse(reason))
                 completion(.failure(apiError))
             }

@@ -8,5 +8,9 @@
 import Foundation
 
 struct ProductsResponse: Response {
-    
+    let products: [Product]
+
+    private enum CodingKeys: String, CodingKey {
+        case products = "vpProductByIds"
+    }
 }
