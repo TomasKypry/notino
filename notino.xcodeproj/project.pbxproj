@@ -11,15 +11,53 @@
 		BB87113B282D9CA2008F4058 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87113A282D9CA2008F4058 /* ProductsViewController.swift */; };
 		BB871140282D9CA3008F4058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB87113F282D9CA3008F4058 /* Assets.xcassets */; };
 		BB871143282D9CA3008F4058 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB871141282D9CA3008F4058 /* LaunchScreen.storyboard */; };
+		BB87115B282D9F17008F4058 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87114C282D9F17008F4058 /* APIError.swift */; };
+		BB87115C282D9F17008F4058 /* APIClientRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87114D282D9F17008F4058 /* APIClientRequestManager.swift */; };
+		BB87115E282D9F17008F4058 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87114F282D9F17008F4058 /* APIClient.swift */; };
+		BB871161282D9F17008F4058 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB871154282D9F17008F4058 /* HTTPMethod.swift */; };
+		BB871163282D9F17008F4058 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB871157282D9F17008F4058 /* Response.swift */; };
+		BB871164282D9F17008F4058 /* APIEnviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB871158282D9F17008F4058 /* APIEnviroment.swift */; };
+		BB871166282D9F17008F4058 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87115A282D9F17008F4058 /* Request.swift */; };
+		BB87116D282D9F28008F4058 /* ReusableCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB871169282D9F28008F4058 /* ReusableCells.swift */; };
+		BB87116E282D9F28008F4058 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87116A282D9F28008F4058 /* UIView+Constraints.swift */; };
+		BB87116F282D9F28008F4058 /* UIEdgeInsets+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87116B282D9F28008F4058 /* UIEdgeInsets+Extension.swift */; };
+		BB871170282D9F28008F4058 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87116C282D9F28008F4058 /* TypeAliases.swift */; };
+		BB87117D282D9F4B008F4058 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87117B282D9F4B008F4058 /* ProductCell.swift */; };
+		BB871181282D9FD2008F4058 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB871180282D9FD2008F4058 /* ProductsViewModel.swift */; };
+		BB871183282DA235008F4058 /* ProductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB871182282DA235008F4058 /* ProductsRequest.swift */; };
+		BB871185282DA2AA008F4058 /* ProductsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB871184282DA2AA008F4058 /* ProductsResponse.swift */; };
+		BB871187282DA2C4008F4058 /* APIClient+Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB871186282DA2C4008F4058 /* APIClient+Products.swift */; };
+		BB87118A282DA34C008F4058 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB871189282DA34C008F4058 /* Product.swift */; };
+		D3F8DF322287DCCE64039810 /* Pods_notino.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38776B5FE03078173B5BEDD9 /* Pods_notino.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20EBFEE32BA9435D1E326923 /* Pods-notino.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notino.debug.xcconfig"; path = "Target Support Files/Pods-notino/Pods-notino.debug.xcconfig"; sourceTree = "<group>"; };
+		38776B5FE03078173B5BEDD9 /* Pods_notino.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_notino.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		725B22175DCBF790B115CF38 /* Pods-notino.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notino.release.xcconfig"; path = "Target Support Files/Pods-notino/Pods-notino.release.xcconfig"; sourceTree = "<group>"; };
 		BB871133282D9CA2008F4058 /* notino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB871136282D9CA2008F4058 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB87113A282D9CA2008F4058 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		BB87113F282D9CA3008F4058 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB871142282D9CA3008F4058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB871144282D9CA3008F4058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB87114C282D9F17008F4058 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		BB87114D282D9F17008F4058 /* APIClientRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientRequestManager.swift; sourceTree = "<group>"; };
+		BB87114F282D9F17008F4058 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		BB871154282D9F17008F4058 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		BB871157282D9F17008F4058 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		BB871158282D9F17008F4058 /* APIEnviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEnviroment.swift; sourceTree = "<group>"; };
+		BB87115A282D9F17008F4058 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		BB871169282D9F28008F4058 /* ReusableCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCells.swift; sourceTree = "<group>"; };
+		BB87116A282D9F28008F4058 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		BB87116B282D9F28008F4058 /* UIEdgeInsets+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Extension.swift"; sourceTree = "<group>"; };
+		BB87116C282D9F28008F4058 /* TypeAliases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
+		BB87117B282D9F4B008F4058 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		BB871180282D9FD2008F4058 /* ProductsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		BB871182282DA235008F4058 /* ProductsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRequest.swift; sourceTree = "<group>"; };
+		BB871184282DA2AA008F4058 /* ProductsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsResponse.swift; sourceTree = "<group>"; };
+		BB871186282DA2C4008F4058 /* APIClient+Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Products.swift"; sourceTree = "<group>"; };
+		BB871189282DA34C008F4058 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +65,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3F8DF322287DCCE64039810 /* Pods_notino.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DD59744580F11A7ED61CC83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38776B5FE03078173B5BEDD9 /* Pods_notino.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BB87112A282D9CA1008F4058 = {
 			isa = PBXGroup;
 			children = (
 				BB871135282D9CA2008F4058 /* notino */,
 				BB871134282D9CA2008F4058 /* Products */,
+				FBA95B10CA84829B8980B4DA /* Pods */,
+				2DD59744580F11A7ED61CC83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,12 +102,135 @@
 			isa = PBXGroup;
 			children = (
 				BB871136282D9CA2008F4058 /* AppDelegate.swift */,
+				BB87114A282D9F17008F4058 /* Services */,
+				BB871167282D9F28008F4058 /* Helpers */,
+				BB871171282D9F41008F4058 /* Components */,
+				BB871179282D9F4B008F4058 /* Views */,
+				BB871188282DA340008F4058 /* Model */,
+				BB87117E282D9F57008F4058 /* Resources */,
+				BB87117F282D9F61008F4058 /* Configuration */,
+			);
+			path = notino;
+			sourceTree = "<group>";
+		};
+		BB87114A282D9F17008F4058 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BB87114B282D9F17008F4058 /* API */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BB87114B282D9F17008F4058 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				BB87114D282D9F17008F4058 /* APIClientRequestManager.swift */,
+				BB87114F282D9F17008F4058 /* APIClient.swift */,
+				BB871150282D9F17008F4058 /* APIClient+Extensions */,
+				BB871152282D9F17008F4058 /* Responses */,
+				BB871155282D9F17008F4058 /* Requests */,
+				BB871154282D9F17008F4058 /* HTTPMethod.swift */,
+				BB871157282D9F17008F4058 /* Response.swift */,
+				BB871158282D9F17008F4058 /* APIEnviroment.swift */,
+				BB87115A282D9F17008F4058 /* Request.swift */,
+				BB87114C282D9F17008F4058 /* APIError.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		BB871150282D9F17008F4058 /* APIClient+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB871186282DA2C4008F4058 /* APIClient+Products.swift */,
+			);
+			path = "APIClient+Extensions";
+			sourceTree = "<group>";
+		};
+		BB871152282D9F17008F4058 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				BB871184282DA2AA008F4058 /* ProductsResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		BB871155282D9F17008F4058 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				BB871182282DA235008F4058 /* ProductsRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		BB871167282D9F28008F4058 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BB871168282D9F28008F4058 /* Extensions */,
+				BB87116C282D9F28008F4058 /* TypeAliases.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BB871168282D9F28008F4058 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB871169282D9F28008F4058 /* ReusableCells.swift */,
+				BB87116A282D9F28008F4058 /* UIView+Constraints.swift */,
+				BB87116B282D9F28008F4058 /* UIEdgeInsets+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BB871171282D9F41008F4058 /* Components */ = {
+			isa = PBXGroup;
+			children = (
 				BB87113A282D9CA2008F4058 /* ProductsViewController.swift */,
+				BB871180282D9FD2008F4058 /* ProductsViewModel.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BB871179282D9F4B008F4058 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB87117B282D9F4B008F4058 /* ProductCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB87117E282D9F57008F4058 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				BB87113F282D9CA3008F4058 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BB87117F282D9F61008F4058 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
 				BB871141282D9CA3008F4058 /* LaunchScreen.storyboard */,
 				BB871144282D9CA3008F4058 /* Info.plist */,
 			);
-			path = notino;
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		BB871188282DA340008F4058 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB871189282DA34C008F4058 /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBA95B10CA84829B8980B4DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20EBFEE32BA9435D1E326923 /* Pods-notino.debug.xcconfig */,
+				725B22175DCBF790B115CF38 /* Pods-notino.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,9 +240,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB871147282D9CA3008F4058 /* Build configuration list for PBXNativeTarget "notino" */;
 			buildPhases = (
+				9A3F3AAD6147A7DC71A32138 /* [CP] Check Pods Manifest.lock */,
 				BB87112F282D9CA2008F4058 /* Sources */,
 				BB871130282D9CA2008F4058 /* Frameworks */,
 				BB871131282D9CA2008F4058 /* Resources */,
+				69DB7F21483A9E1227C01856 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,13 +300,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		69DB7F21483A9E1227C01856 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-notino/Pods-notino-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-notino/Pods-notino-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-notino/Pods-notino-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A3F3AAD6147A7DC71A32138 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-notino-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BB87112F282D9CA2008F4058 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB87118A282DA34C008F4058 /* Product.swift in Sources */,
 				BB87113B282D9CA2008F4058 /* ProductsViewController.swift in Sources */,
+				BB87116F282D9F28008F4058 /* UIEdgeInsets+Extension.swift in Sources */,
+				BB87115C282D9F17008F4058 /* APIClientRequestManager.swift in Sources */,
 				BB871137282D9CA2008F4058 /* AppDelegate.swift in Sources */,
+				BB871161282D9F17008F4058 /* HTTPMethod.swift in Sources */,
+				BB871164282D9F17008F4058 /* APIEnviroment.swift in Sources */,
+				BB871163282D9F17008F4058 /* Response.swift in Sources */,
+				BB87116D282D9F28008F4058 /* ReusableCells.swift in Sources */,
+				BB871170282D9F28008F4058 /* TypeAliases.swift in Sources */,
+				BB871181282D9FD2008F4058 /* ProductsViewModel.swift in Sources */,
+				BB87115B282D9F17008F4058 /* APIError.swift in Sources */,
+				BB871166282D9F17008F4058 /* Request.swift in Sources */,
+				BB87117D282D9F4B008F4058 /* ProductCell.swift in Sources */,
+				BB871183282DA235008F4058 /* ProductsRequest.swift in Sources */,
+				BB87115E282D9F17008F4058 /* APIClient.swift in Sources */,
+				BB871187282DA2C4008F4058 /* APIClient+Products.swift in Sources */,
+				BB871185282DA2AA008F4058 /* ProductsResponse.swift in Sources */,
+				BB87116E282D9F28008F4058 /* UIView+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +499,7 @@
 		};
 		BB871148282D9CA3008F4058 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20EBFEE32BA9435D1E326923 /* Pods-notino.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -273,7 +507,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YSRVH8JGKB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = notino/Info.plist;
+				INFOPLIST_FILE = notino/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -293,6 +527,7 @@
 		};
 		BB871149282D9CA3008F4058 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 725B22175DCBF790B115CF38 /* Pods-notino.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -300,7 +535,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YSRVH8JGKB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = notino/Info.plist;
+				INFOPLIST_FILE = notino/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
