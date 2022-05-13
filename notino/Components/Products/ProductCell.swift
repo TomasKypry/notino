@@ -48,10 +48,10 @@ class ProductCell: UICollectionViewCell {
     }
 
     private lazy var favoriteButton = HeartButton { [weak self] active in
-        self?.onFavoriteTap?(active)
+        self?.viewModel?.onFavoriteChange?(active)
     }
 
-    var onFavoriteTap: ((Bool) -> Void)?
+    private var viewModel: ProductCellViewModel?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -66,36 +66,20 @@ class ProductCell: UICollectionViewCell {
     override func prepareForReuse() {
         imageView.kf.cancelDownloadTask()
         favoriteButton.setState(active: false)
+        viewModel = nil
     }
 
-    func setup(with product: Product, isFavorite: Bool) {
-        imageView.kf.setImage(with: imageDownloadUrl(for: product))
-        brandLabel.text = product.brand.name
-        nameLabel.text = product.name
-        descriptionLabel.text = product.annotation
-        priceLabel.text = price(for: product)
-        ratingView.setupContent(maxRate: product.reviewSummary.score, rate: Int(product.reviewSummary.averageRating))
-        favoriteButton.setState(active: isFavorite)
-    }
+    func setup(with viewModel: ProductCellViewModel) {
+        self.viewModel = viewModel
+        imageView.kf.setImage(with: viewModel.imageUrl)
+        brandLabel.text = viewModel.brand
+        nameLabel.text = viewModel.name
+        descriptionLabel.text = viewModel.description
+        priceLabel.text = viewModel.price
 
-    private func imageDownloadUrl(for product: Product) -> URL? {
-        return URL(string: Constants.imagePrefixUrl + product.imageUrl)
-    }
-
-    private func price(for product: Product) -> String? {
-        let currencySymbol: String
-
-        switch product.price.currency {
-        case .czk:
-            currencySymbol = "Kč"
-        }
-
-        let formatter = NumberFormatter()
-        formatter.currencySymbol = currencySymbol
-        formatter.numberStyle = .currency
-        formatter.maximumFractionDigits = 0
-        formatter.usesGroupingSeparator = false
-        return formatter.string(from: product.price.value as NSNumber)
+        ratingView.setupContent(maxRate: viewModel.rating.max,
+                                rate: viewModel.rating.current)
+        favoriteButton.setState(active: viewModel.isFavorite)
     }
 
     private func setupLayout() {

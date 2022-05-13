@@ -10,6 +10,7 @@
 		BB7A646F282E92F40012BBDB /* CartBuyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7A646E282E92F40012BBDB /* CartBuyButton.swift */; };
 		BB7A6471282E95340012BBDB /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7A6470282E95340012BBDB /* HeartButton.swift */; };
 		BB7A6473282E9A590012BBDB /* UserDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7A6472282E9A590012BBDB /* UserDefaultHelper.swift */; };
+		BB7A6475282E9D490012BBDB /* ProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7A6474282E9D490012BBDB /* ProductCellViewModel.swift */; };
 		BB871137282D9CA2008F4058 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB871136282D9CA2008F4058 /* AppDelegate.swift */; };
 		BB87113B282D9CA2008F4058 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87113A282D9CA2008F4058 /* ProductsViewController.swift */; };
 		BB871140282D9CA3008F4058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB87113F282D9CA3008F4058 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		BB7A646E282E92F40012BBDB /* CartBuyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartBuyButton.swift; sourceTree = "<group>"; };
 		BB7A6470282E95340012BBDB /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
 		BB7A6472282E9A590012BBDB /* UserDefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHelper.swift; sourceTree = "<group>"; };
+		BB7A6474282E9D490012BBDB /* ProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModel.swift; sourceTree = "<group>"; };
 		BB871133282D9CA2008F4058 /* notino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB871136282D9CA2008F4058 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB87113A282D9CA2008F4058 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				BB87113A282D9CA2008F4058 /* ProductsViewController.swift */,
 				BB871180282D9FD2008F4058 /* ProductsViewModel.swift */,
 				BB87117B282D9F4B008F4058 /* ProductCell.swift */,
+				BB7A6474282E9D490012BBDB /* ProductCellViewModel.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				BB871193282DB5E4008F4058 /* Constants.swift in Sources */,
 				BB871161282D9F17008F4058 /* HTTPMethod.swift in Sources */,
 				BB871164282D9F17008F4058 /* APIEnviroment.swift in Sources */,
+				BB7A6475282E9D490012BBDB /* ProductCellViewModel.swift in Sources */,
 				BB871163282D9F17008F4058 /* Response.swift in Sources */,
 				BB87116D282D9F28008F4058 /* ReusableCells.swift in Sources */,
 				BB871170282D9F28008F4058 /* TypeAliases.swift in Sources */,

@@ -7,6 +7,8 @@
 
 import UIKit
 
+// NOTE: Paging should be implemented, but api response doesn't include paging info
+
 class ProductsViewController: UIViewController {
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -63,12 +65,8 @@ extension ProductsViewController: UICollectionViewDataSource, UICollectionViewDe
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ProductCell = collectionView.dequeueCell(for: indexPath)
-        let product = viewModel.products[indexPath.item]
-        let isFavorite = viewModel.isFavorite(product: product)
-        cell.setup(with: product, isFavorite: isFavorite)
-        cell.onFavoriteTap = { [weak self] favorite in
-            self?.viewModel.saveFavoriteState(product: product, isFavorite: favorite)
-        }
+        let cellViewModel = viewModel.cellViewModel(for: indexPath)
+        cell.setup(with: cellViewModel)
         return cell
     }
 

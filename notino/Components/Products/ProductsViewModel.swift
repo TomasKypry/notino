@@ -16,6 +16,8 @@ class ProductsViewModel {
         }
     }
 
+    private var cellViewModels: [ProductCellViewModel] = []
+
     private var favoriteIds: Set<Int> = []
 
     var onReloadNeeded: VoidCallback?
@@ -33,27 +35,34 @@ class ProductsViewModel {
         favoriteIds = Set<Int>(UserDefaultHelper.favoritesProductsIds)
     }
 
-    func saveFavoriteState(product: Product, isFavorite: Bool) {
-        if isFavorite {
-            favoriteIds.insert(product.productId)
-        } else {
-            favoriteIds.remove(product.productId)
+    func cellViewModel(for indexPath: IndexPath) -> ProductCellViewModel {
+        let viewModel = cellViewModels[indexPath.item]
+        viewModel.isFavorite = favoriteIds.contains(viewModel.id)
+        viewModel.onFavoriteChange = { [weak self] favorite in
+            self?.saveFavoriteState(id: viewModel.id, isFavorite: favorite)
         }
-        UserDefaultHelper.favoritesProductsIds = Array(favoriteIds)
-    }
-
-    func isFavorite(product: Product) -> Bool {
-        return favoriteIds.contains(product.productId)
+        return viewModel
     }
 
     func fetchProducts() {
         apiClient.getProducts { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .failure(let error):
                 print(error)
             case .success(let response):
-                self?.products = response.products
+                self.products = response.products
+                self.cellViewModels = self.products.map { ProductCellViewModel(product: $0 ) }
             }
         }
+    }
+
+    private func saveFavoriteState(id: Int, isFavorite: Bool) {
+        if isFavorite {
+            favoriteIds.insert(id)
+        } else {
+            favoriteIds.remove(id)
+        }
+        UserDefaultHelper.favoritesProductsIds = Array(favoriteIds)
     }
 }
