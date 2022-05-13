@@ -10,11 +10,11 @@ import UIKit
 class ProductsViewController: UIViewController {
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 10
-        layout.minimumInteritemSpacing = 10
+        layout.minimumLineSpacing = viewModel.itemSpacing
+        layout.minimumInteritemSpacing = viewModel.itemSpacing
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.alwaysBounceVertical = true
-        view.contentInset = .allSides(10)
+        view.contentInset = .allSides(viewModel.itemSpacing)
         view.dataSource = self
         view.delegate = self
         return view
@@ -34,8 +34,13 @@ class ProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupNavigationBar()
         setupLayout()
         loadProducts()
+    }
+
+    private func setupNavigationBar() {
+        title = "Notino"
     }
 
     private func setupLayout() {
@@ -59,8 +64,11 @@ extension ProductsViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ProductCell = collectionView.dequeueCell(for: indexPath)
         let product = viewModel.products[indexPath.item]
-        cell.setup(with: product)
-        cell.backgroundColor = .blue
+        let isFavorite = viewModel.isFavorite(product: product)
+        cell.setup(with: product, isFavorite: isFavorite)
+        cell.onFavoriteTap = { [weak self] favorite in
+            self?.viewModel.saveFavoriteState(product: product, isFavorite: favorite)
+        }
         return cell
     }
 

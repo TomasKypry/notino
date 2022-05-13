@@ -19,8 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupRootController() {
         let viewModel = ProductsViewModel(apiClient: .shared)
         let productsViewController = ProductsViewController(viewModel: viewModel)
+        let navigationController = UINavigationController(rootViewController: productsViewController)
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = productsViewController
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 }

@@ -8,9 +8,10 @@
 import Foundation
 
 struct Product: Codable {
+    let productId: Int
     let name: String
     let annotation: String
-    let imageUrl: URL
+    let imageUrl: String
     let brand: Brand
     let price: Price
     let reviewSummary: Review

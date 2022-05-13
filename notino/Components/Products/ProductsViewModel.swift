@@ -5,7 +5,7 @@
 //  Created by Tomáš Kyprý on 12.05.2022.
 //
 
-import Foundation
+import UIKit
 
 class ProductsViewModel {
     private let apiClient: APIClient
@@ -16,14 +16,34 @@ class ProductsViewModel {
         }
     }
 
+    private var favoriteIds: Set<Int> = []
+
     var onReloadNeeded: VoidCallback?
 
     var numberOfItemsPerRow: Int {
         2
     }
 
+    var itemSpacing: CGFloat {
+        20
+    }
+
     init(apiClient: APIClient = .shared) {
         self.apiClient = apiClient
+        favoriteIds = Set<Int>(UserDefaultHelper.favoritesProductsIds)
+    }
+
+    func saveFavoriteState(product: Product, isFavorite: Bool) {
+        if isFavorite {
+            favoriteIds.insert(product.productId)
+        } else {
+            favoriteIds.remove(product.productId)
+        }
+        UserDefaultHelper.favoritesProductsIds = Array(favoriteIds)
+    }
+
+    func isFavorite(product: Product) -> Bool {
+        return favoriteIds.contains(product.productId)
     }
 
     func fetchProducts() {
