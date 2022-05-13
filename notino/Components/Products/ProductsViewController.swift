@@ -15,6 +15,7 @@ class ProductsViewController: UIViewController {
         layout.minimumLineSpacing = viewModel.itemSpacing
         layout.minimumInteritemSpacing = viewModel.itemSpacing
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.backgroundColor = .white
         view.alwaysBounceVertical = true
         view.contentInset = .allSides(viewModel.itemSpacing)
         view.dataSource = self
